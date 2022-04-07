@@ -1,6 +1,6 @@
 # Vue3 Playground
 
-A project to try and keep up with Vue3 new features.
+A project to try and keep up with Vue3 new features. [View app](https://radiant-cranachan-58f290.netlify.app/)
 
 ## Recommended IDE Setup
 
