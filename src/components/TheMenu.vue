@@ -9,19 +9,19 @@ import SupportIcon from "./icons/IconSupport.vue";
 
 <template>
   <div>
-    <MenuItem title="Documentation" :to="{ name: 'home' }">
+    <MenuItem title="To do list" :to="{ name: 'home' }">
       <template #icon>
         <DocumentationIcon />
       </template>
     </MenuItem>
 
-    <MenuItem :to="{ name: 'about' }">
+    <MenuItem title="CSS features" :to="{ name: 'about' }">
       <template #icon>
         <ToolingIcon />
       </template>
     </MenuItem>
 
-    <MenuItem :to="{ name: 'about' }">
+    <MenuItem title="Pinia" :to="{ name: 'about' }">
       <template #icon>
         <EcosystemIcon />
       </template>
