@@ -6,20 +6,32 @@ defineProps<{
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a target="_blank" href="https://vitejs.dev/">Vite</a> +
-      <a target="_blank" href="https://vuejs.org/">Vue 3</a>. What's next?
-    </h3>
+    <h1 class="green">
+      <img
+        alt="Vue logo"
+        class="logo"
+        src="@/assets/logo.svg"
+        width="60"
+        height="60"
+      />{{ msg }}
+    </h1>
+    <h3>Now let's play, click on one of the icons to discover some usecase.</h3>
   </div>
 </template>
 
 <style scoped>
+.logo {
+  display: block;
+}
+
 h1 {
   font-weight: 500;
-  font-size: 2.6rem;
+  font-size: 2rem;
   top: -10px;
+  line-height: 1;
+  display: flex;
+  column-gap: 0.5rem;
+  place-items: center;
 }
 
 h3 {
