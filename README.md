@@ -1,10 +1,12 @@
-# vue3-playground
+# Vue3 Playground
 
-This template should help get you started developing with Vue 3 in Vite.
+A project to try and keep up with Vue3 new features.
 
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+
+Remember to disable Vetur in your Vue3 projects.
 
 ## Type Support for `.vue` Imports in TS
 
