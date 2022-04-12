@@ -15,69 +15,31 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink :to="to" class="item">
-    <i class="tooltip-toggle" :aria-label="title" tabindex="0">
-      <slot name="icon"></slot>
-    </i>
+  <RouterLink :to="to" class="menu-item" :title="title">
+    <slot name="icon"></slot>
   </RouterLink>
 </template>
 
 <style scoped lang="scss">
-.tooltip-toggle {
-  cursor: pointer;
-
-  //Tooltip text container
-  &::before {
-    position: absolute;
-    top: 0rem;
-    left: 52px;
-    background-color: #2b222a;
-    border-radius: 5px;
-    color: #fff;
-    padding: 0.5rem;
-    width: 15ch;
-    content: attr(aria-label);
-    transition: all 0.5s ease;
-  }
-
-  &::before {
-    color: #efefef;
-    opacity: 0;
-    pointer-events: none;
-    text-align: center;
-  }
-
-  &:hover::before {
-    opacity: 0.5;
-    transition: all 0.75s ease;
-  }
-}
-
-.item {
-  display: block;
-  margin-top: 2rem;
-  padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+.menu-item {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  height: 50px;
+  width: 50px;
+  margin: 5px 0;
+  background: var(--color-background);
+  transition: background 0.25s;
+  color: var(--color-text);
 
   &:hover {
-    i {
-      background-color: hsla(160, 100%, 37%, 0.2);
-    }
+    background-color: hsla(160, 100%, 37%, 0.4) !important;
   }
-}
 
-i {
-  display: flex;
-  place-items: center;
-  place-content: center;
-
-  color: var(--color-text);
-  top: calc(50% - 25px);
-  left: -26px;
-  position: absolute;
-  border: 1px solid var(--color-border);
-  background: var(--color-background);
-  border-radius: 8px;
-  width: 50px;
-  height: 50px;
+  &.router-link-active {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
 }
 </style>

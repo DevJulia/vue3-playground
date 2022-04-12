@@ -11,8 +11,10 @@ import TheMenu from "@/components/TheMenu.vue";
     </div>
   </header>
 
-  <TheMenu />
-  <RouterView />
+  <div class="main-content">
+    <TheMenu />
+    <RouterView />
+  </div>
 </template>
 
 <style>
@@ -62,6 +64,12 @@ nav a:first-of-type {
   border: 0;
 }
 
+.main-content {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 10px;
+}
+
 @media (min-width: 1024px) {
   body {
     display: flex;
@@ -71,6 +79,7 @@ nav a:first-of-type {
   #app {
     display: grid;
     grid-template-columns: 1fr 50px 2fr;
+    column-gap: 1.5rem;
     padding: 0 2rem;
   }
 
@@ -93,6 +102,10 @@ nav a:first-of-type {
 
     padding: 1rem 0;
     margin-top: 1rem;
+  }
+
+  .main-content {
+    display: contents;
   }
 }
 </style>

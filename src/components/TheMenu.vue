@@ -7,8 +7,8 @@ import SupportIcon from "./icons/IconSupport.vue";
 </script>
 
 <template>
-  <div>
-    <MenuItem title="To do list" :to="{ name: 'home' }">
+  <div class="app-menu">
+    <MenuItem title="To do list" :to="{ name: 'todo' }">
       <template #icon>
         <font-awesome-icon :icon="['far', 'rectangle-list']" />
       </template>
@@ -39,3 +39,11 @@ import SupportIcon from "./icons/IconSupport.vue";
     </MenuItem>
   </div>
 </template>
+
+<style scoped lang="scss">
+.app-menu {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+</style>
